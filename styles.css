@@ -1,0 +1,306 @@
+/* Estilos CSS */
+
+h2 {
+    color:#ffd700;
+    text-decoration: #333;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f9ca00;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px; 
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav ul a:hover {
+    background-color: rgb(248, 244, 244);
+    color:#080808;
+    
+}
+
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.member {
+    margin: 20px;
+}
+
+.member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+ #how-we-met {
+    background-image: url('./images/pexels-mikael-blomkvist-6476260.jpg'); /* Ruta de la imagen de fondo */
+    background-size:cover ;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+
+ }
+.how-we-met-container {
+   /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;*/
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+
+footer {
+    background-color: #f9ca00 ;
+    color: rgb(8, 8, 8);
+    text-align: center;
+    padding: 20px;
+}
+
+.social-media img {
+    width: 30px; /* Ajusta el tamaño de los iconos de redes sociales según necesites */
+    margin: 0 10px;
+}
+
+
+
+#about-us {
+    background-image: url('./images/pexels-thisisengineering-3861969.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+}
+
+.about-us-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para resaltar el texto */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+}
+
+button {
+    background-color: #f9ca00;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para el formulario */
+form {
+    margin-top: 20px;
+}
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+input[type="submit"] {
+    background-color: #f9ca00;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #ffd700;
+}
+
+
+
+
+
+/* ESTILOS ICONOS */
+
+.fa-twitter {
+    color: yellow;
+  }
+  
+  /* PUNTO TRAS TWITTER */
+  
+  .fa-twitter:after {
+    content: "\002E";
+    position: relative;
+    top: -4px;
+    left: 8px;
+    color: black;
+  }
+  
+  .fa-linkedin-in {
+    color: yellow;
+  }
+  
+  .fa-linkedin-in-odd {
+    color: yellow;
+  }
+  
+  /* PUNTO TRAS LINKEDIN */
+  
+  .fa-linkedin-in:after {
+    content: "\002E";
+    position: relative;
+    top: -4px;
+    left: 8px;
+    color: black;
+  }
+  
+  .fa-linkedin-in-odd:after {
+    content: "\002E";
+    position: relative;
+    top: -4px;
+    left: 12px;
+    color: black;
+  }
+  
+  .fa-github-alt {
+    color: yellow;
+  }
+  
+  .fa-github-alt-odd {
+    color: yellow;
+  }
+  
+  /* PUNTO TRAS GITHUB */
+  
+  .fa-github-alt:after {
+    content: "\002E";
+    position: relative;
+    top: -4px;
+    left: 8px;
+    color: black;
+  }
+  
+  .fa-github-alt-odd:after {
+    content: "\002E";
+    position: relative;
+    top: -4px;
+    left: 12px;
+    color: black;
+  }
+  
+  .fa-envelope {
+    color: yellow;
+  }
+  
+  .icons {
+    width: 124px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+/* Media Queries para Tablets */
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .how-we-met-container {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .how-we-met-container .image img {
+        width: 80%;
+    }
+
+    .how-we-met-container .text {
+        width: 100%;
+    }
+}
+
+/* Media Queries para Móviles */
+@media (max-width: 480px) {
+    .logo img {
+        width: 80px;
+    }
+
+    .about-text h2 {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .how-we-met-container .image img {
+        width: 100%;
+    }
+
+    .how-we-met-container .text {
+        width: 100%;
+    }
+}
