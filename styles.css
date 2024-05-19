@@ -1,4 +1,4 @@
-/* Estilos CSS */
+
 
 h2 {
     color:#ffd700;
@@ -73,15 +73,10 @@ section {
     padding: 100px 0;
 
  }
-.how-we-met-container {
-   /* display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 50px;*/
+.container {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-
 }
 
 
@@ -98,19 +93,12 @@ footer {
 }
 
 
-
 #about-us {
     background-image: url('./images/pexels-thisisengineering-3861969.jpg'); /* Ruta de la imagen de fondo */
     background-size: cover;
     background-position: center;
     color: #fff;
     padding: 100px 0;
-}
-
-.about-us-container {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
 }
 
 .about-text {
@@ -128,6 +116,15 @@ footer {
     font-size: 1.2rem;
 }
 
+
+#analisis {
+    background-image: url('./images/pexels-pixabay-265087.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+}
+
 button {
     background-color: #f9ca00;
     color: #333;
@@ -135,6 +132,11 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.empty {
+height: 150px;
+
 }
 
 /* Estilos para el formulario */
@@ -268,16 +270,16 @@ input[type="submit"]:hover {
         margin: 10px 0;
     }
 
-    .how-we-met-container {
+    .container {
         flex-direction: column;
         padding: 0 20px;
     }
 
-    .how-we-met-container .image img {
+    .container .image img {
         width: 80%;
     }
 
-    .how-we-met-container .text {
+    .container .text {
         width: 100%;
     }
 }
@@ -296,11 +298,11 @@ input[type="submit"]:hover {
         font-size: 1rem;
     }
 
-    .how-we-met-container .image img {
+    .container .image img {
         width: 100%;
     }
 
-    .how-we-met-container .text {
+    .container .text {
         width: 100%;
     }
 }

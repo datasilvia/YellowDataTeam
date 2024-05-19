@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="./images/YDT LOGO.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análisis de Air B&B</title>
+    <link rel="stylesheet" href="styles2.css">
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            const button = document.getElementById(`btn-${id}`);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                button.textContent = "Menos";
+            } else {
+                content.style.display = "none";
+                button.textContent = "Saber más";
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./images/YDT LOGO.png" alt="Logo Yellow Data Team">
+            </div>
+    
+            <div class="titulo"> 
+                <h1>Yellow Data Team</h1>
+            </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#planteamiento">Planteamiento</a></li>
+                <li><a href="index.html#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="planteamiento">
+            <h2>Planteamiento del ejercicio</h2>
+            <div class="section">
+                <h3>1. Definición del Data Set</h3>
+                <p></p>
+                <button id="btn-content1" onclick="toggleContent('content1')">Saber más</button>
+                <div id="content1" style="display: none;">
+                    <h3>Definición del Data Set</h3>
+                       <p> El data set escogido es scrapeado de la web de AirBnB <a target="_blank" href="https://insideairbnb.com/get-the-data/">(https://insideairbnb.com/get-the-data/)</a> y fue descargado de la web  <a target="_blank" href="https://public.opendatasoft.com/explore/dataset/air-bnb-listings/information/?disjunctive.neighbourhood&disjunctive.column_10&disjunctive.city&q=Madrid&location=7,40.5931,-4.422&basemap=jawg.light)">OpenDataSoft.</a>
+                        Este conjunto de datos tiene aplicado un filtro y muestra la información principal sobre las habitaciones disponibles en AirBnB en Madrid para un período de tiempo determinado.
+                        Las columnas que posee son:
+                       <div class="list"> 
+                        <ul>
+                            <li>Location</li>
+                            <li>Coordinates</li>
+                            <li>Room ID</li>
+                            <li>Name</li>
+                            <li>Host ID</li>
+                            <li>Room type</li>
+                            <li>Room Price</li>
+                            <li>Number of reviews</li>
+                            <li>Minimum nights</li>
+                            <li>Updated Date</li>
+                            <li>Availibility</li>
+                            <li>Rooms rent by the host</li>
+                            <li>Number of reviews per month</li>
+                            <li>Date last review</li>
+                        </ul>
+                        </div>
+                       </p>
+                        
+                        Este es el punto de partida de este proyecto, sobre el que trabajaremos realizando una selección de datos relevantes para nuestro análisis. Esto nos permitirá identificar KPIs y contestar la siguiente pregunta:
+                        —--------------------------------------------------------------------------------------------------------------------
+                        
+                        <h2>Análisis de Datos de AirBnB en Madrid</h2>
+                        En este proyecto, utilizamos un dataset proporcionado por AirBnB para analizar las variables que más influyen en el alza de precios de los hospedajes en la ciudad de Madrid. Nuestro objetivo es identificar los factores clave que impactan en la facturación y desarrollar una herramienta predictiva que beneficie tanto a los anfitriones como a la empresa.
+                        Variables Clave en el Alza de Precios
+                        A través de un análisis exhaustivo, descubrimos que las siguientes variables son las que más influyen en el precio de los hospedajes:
+                        <div class="list">
+                        <ul>
+                        <li>Tipo de Habitación (Room Type): Esta es la variable más influyente. Los tipos de hospedaje que mayores ingresos generan son "Entire Home" (casa completa) y "Private Room" (habitación privada).</li>
+                        <li>Número de Habitaciones Alquiladas por el Anfitrión (Rooms Rent by the Host): Esta variable indica la capacidad de oferta del anfitrión y tiene un impacto significativo en los precios.</li>
+                        <li>Disponibilidad (Availability): La disponibilidad del hospedaje también juega un papel crucial. Mayor disponibilidad puede llevar a mayores ingresos al permitir más reservas a lo largo del año.</li>
+                        </ul>
+                        </div>
+                        <h2>Desarrollo de una Herramienta Predictiva</h2>
+                        Basándonos en estos hallazgos, hemos desarrollado una herramienta para AirBnB con los siguientes propósitos:
+                        <div class="list">
+                        <ul>
+                       <li>Predicción de Precios para Anfitriones: Ofrecer a los anfitriones con un año de antigüedad en la plataforma la capacidad de predecir el precio óptimo de sus hospedajes. Utilizando las variables clave identificadas, los anfitriones podrán ajustar sus precios para maximizar sus ganancias.</li>
+                        <li>Incentivar Nuevos Anfitriones: AirBnB puede utilizar esta herramienta para atraer nuevos anfitriones, destacando los tipos de hospedaje que generan más ingresos. Esto no solo optimiza la oferta de hospedajes en Madrid, sino que también incrementa la satisfacción de los anfitriones y, en consecuencia, la retención de estos en la plataforma.</li>
+                        </ul>
+                        </div>
+                            <h2>Conclusión</h2>
+                        Este proyecto de análisis de datos no solo proporciona una comprensión profunda de los factores que influyen en el alza de precios en AirBnB Madrid, sino que también ofrece soluciones prácticas y estratégicas para maximizar los ingresos tanto para los anfitriones como para la empresa. La herramienta predictiva desarrollada es un paso hacia una gestión más eficiente y rentable de los hospedajes en la plataforma.
+                        <h3>Beneficios Esperados</h3>
+                        <div class="list">
+                        <ul>
+                       <li>Optimización de Ingresos: Anfitriones podrán fijar precios más competitivos y rentables.</li>
+                       <li>Aumento en la Satisfacción del Usuario: Tanto anfitriones como huéspedes se beneficiarán de una plataforma más informada y eficiente.</li>
+                       <li>Expansión de la Oferta de Hospedajes: Al atraer nuevos anfitriones, AirBnB podrá aumentar su catálogo de opciones disponibles, mejorando la experiencia del usuario.</li>
+                        </ul> 
+                        </div>
+                       Este enfoque analítico y orientado a datos nos permite ofrecer soluciones que están alineadas con las necesidades del mercado y las oportunidades de crecimiento de AirBnB en Madrid.</li>
+                        </p>
+                    <img src="data-set.jpg" alt="Data Set Image">
+                    <button onclick="toggleContent('content1')">Menos</button>
+                </div>
+            </div>
+            <div class="section">
+                <h3>2. Arquitectura y validación de los datos</h3>
+                <p>Descripción.</p>
+                <button id="btn-content2" onclick="toggleContent('content2')">Saber más</button>
+                <div id="content2" style="display: none;">
+                    <p>arquitectura y validación de los datos. </p>
+                    <img src="./images/Diagrama Entidad-Relacion.jpg" alt="Arquitectura Image">
+                    <button onclick="toggleContent('content2')">Menos</button>
+                </div>
+            </div>
+            <div class="section">
+                <h3>3. Análisis Exploratorio</h3>
+                <p>Descripción.</p>
+                <button id="btn-content3" onclick="toggleContent('content3')">Saber más</button>
+                <div id="content3" style="display: none;">
+                    <p>análisis exploratorio.</p>
+                    <img src="analisis.jpg" alt="Análisis Image">
+                    <button onclick="toggleContent('content3')">Menos</button>
+                </div>
+            </div>
+            <div class="section">
+                <h3>4. Visualización de las métricas</h3>
+                <p>Descripción.</p>
+                <button id="btn-content4" onclick="toggleContent('content4')">Saber más</button>
+                <div id="content4" style="display: none;">
+                    <p> visualización de las métricas.</p>
+                    <img src="metricas.jpg" alt="Métricas Image">
+                    <button onclick="toggleContent('content4')">Menos</button>
+                </div>
+            </div>
+            <div class="section">
+                <h3>5. Pre-procesamiento y modelado</h3>
+                <p>Descripción.</p>
+                <button id="btn-content5" onclick="toggleContent('content5')">Saber más</button>
+                <div id="content5" style="display: none;">
+                    <p>pre-procesamiento y modelado. </p>
+                    <img src="preprocesamiento.jpg" alt="Preprocesamiento Image">
+                    <button onclick="toggleContent('content5')">Menos</button>
+                </div>
+            </div>
+            <div class="section">
+                <h3>6. Informe</h3>
+                <p>Descripción</p>
+                <button id="btn-content6" onclick="toggleContent('content6')">Saber más</button>
+                <div id="content6" style="display: none;">
+                    <p> informe</p>
+                    <img src="informe.jpg" alt="Informe Image">
+                    <button onclick="toggleContent('content6')">Menos</button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <!-- <div class="social-media">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div> -->
+        <p>Yellow Data Team - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>
+</body>
+</html>
