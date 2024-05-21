@@ -18,6 +18,16 @@
                 button.textContent = "Saber más";
             }
         }
+            function openModal(imgSrc) {
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalImage');
+                modal.style.display = 'block';
+                modalImg.src = imgSrc;
+            }
+            
+            function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
     </script>
 </head>
 <body>
@@ -32,7 +42,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#planteamiento">Planteamiento</a></li>
+                <li><a href="index.html#team">Nuestro equipo</a></li>
                 <li><a href="index.html#contact">Contacto</a></li>
             </ul>
         </nav>
@@ -40,6 +50,10 @@
     <div class="container">
         <section id="planteamiento">
             <h2>Planteamiento del ejercicio</h2>
+            <p>Se nos pide hacer un análisis del dataset de AirBnb.<br>
+                 Nuestro objetivo es averiguar cómo influyen las diferentes características en el valor del inmueble<br>
+                  para poder hacer un algoritmo que prediga su precio en función de ciertas característica
+                </p>
             <div class="section">
                 <h3>1. Definición del Data Set</h3>
                 <p></p>
@@ -47,7 +61,7 @@
                 <div id="content1" style="display: none;">
                     <h3>Definición del Data Set</h3>
                        <p> El data set escogido es scrapeado de la web de AirBnB <a target="_blank" href="https://insideairbnb.com/get-the-data/">(https://insideairbnb.com/get-the-data/)</a> y fue descargado de la web  <a target="_blank" href="https://public.opendatasoft.com/explore/dataset/air-bnb-listings/information/?disjunctive.neighbourhood&disjunctive.column_10&disjunctive.city&q=Madrid&location=7,40.5931,-4.422&basemap=jawg.light)">OpenDataSoft.</a>
-                        Este conjunto de datos tiene aplicado un filtro y muestra la información principal sobre las habitaciones disponibles en AirBnB en Madrid para un período de tiempo determinado.
+                        Este conjunto de datos tiene aplicado un filtro y muestra la información principal sobre las habitaciones disponibles en AirBnB en Madrid para un período de tiempo determinado.<br>
                         Las columnas que posee son:
                        <div class="list"> 
                         <ul>
@@ -68,106 +82,113 @@
                         </ul>
                         </div>
                        </p>
-                        
-                        Este es el punto de partida de este proyecto, sobre el que trabajaremos realizando una selección de datos relevantes para nuestro análisis. Esto nos permitirá identificar KPIs y contestar la siguiente pregunta:
-                        —--------------------------------------------------------------------------------------------------------------------
-                        
-                        <h2>Análisis de Datos de AirBnB en Madrid</h2>
-                        En este proyecto, utilizamos un dataset proporcionado por AirBnB para analizar las variables que más influyen en el alza de precios de los hospedajes en la ciudad de Madrid. Nuestro objetivo es identificar los factores clave que impactan en la facturación y desarrollar una herramienta predictiva que beneficie tanto a los anfitriones como a la empresa.
-                        Variables Clave en el Alza de Precios
-                        A través de un análisis exhaustivo, descubrimos que las siguientes variables son las que más influyen en el precio de los hospedajes:
-                        <div class="list">
-                        <ul>
-                        <li>Tipo de Habitación (Room Type): Esta es la variable más influyente. Los tipos de hospedaje que mayores ingresos generan son "Entire Home" (casa completa) y "Private Room" (habitación privada).</li>
-                        <li>Número de Habitaciones Alquiladas por el Anfitrión (Rooms Rent by the Host): Esta variable indica la capacidad de oferta del anfitrión y tiene un impacto significativo en los precios.</li>
-                        <li>Disponibilidad (Availability): La disponibilidad del hospedaje también juega un papel crucial. Mayor disponibilidad puede llevar a mayores ingresos al permitir más reservas a lo largo del año.</li>
-                        </ul>
-                        </div>
-                        <h2>Desarrollo de una Herramienta Predictiva</h2>
-                        Basándonos en estos hallazgos, hemos desarrollado una herramienta para AirBnB con los siguientes propósitos:
-                        <div class="list">
-                        <ul>
-                       <li>Predicción de Precios para Anfitriones: Ofrecer a los anfitriones con un año de antigüedad en la plataforma la capacidad de predecir el precio óptimo de sus hospedajes. Utilizando las variables clave identificadas, los anfitriones podrán ajustar sus precios para maximizar sus ganancias.</li>
-                        <li>Incentivar Nuevos Anfitriones: AirBnB puede utilizar esta herramienta para atraer nuevos anfitriones, destacando los tipos de hospedaje que generan más ingresos. Esto no solo optimiza la oferta de hospedajes en Madrid, sino que también incrementa la satisfacción de los anfitriones y, en consecuencia, la retención de estos en la plataforma.</li>
-                        </ul>
-                        </div>
-                            <h2>Conclusión</h2>
-                        Este proyecto de análisis de datos no solo proporciona una comprensión profunda de los factores que influyen en el alza de precios en AirBnB Madrid, sino que también ofrece soluciones prácticas y estratégicas para maximizar los ingresos tanto para los anfitriones como para la empresa. La herramienta predictiva desarrollada es un paso hacia una gestión más eficiente y rentable de los hospedajes en la plataforma.
-                        <h3>Beneficios Esperados</h3>
-                        <div class="list">
-                        <ul>
-                       <li>Optimización de Ingresos: Anfitriones podrán fijar precios más competitivos y rentables.</li>
-                       <li>Aumento en la Satisfacción del Usuario: Tanto anfitriones como huéspedes se beneficiarán de una plataforma más informada y eficiente.</li>
-                       <li>Expansión de la Oferta de Hospedajes: Al atraer nuevos anfitriones, AirBnB podrá aumentar su catálogo de opciones disponibles, mejorando la experiencia del usuario.</li>
-                        </ul> 
-                        </div>
-                       Este enfoque analítico y orientado a datos nos permite ofrecer soluciones que están alineadas con las necesidades del mercado y las oportunidades de crecimiento de AirBnB en Madrid.</li>
-                        </p>
-                    <img src="data-set.jpg" alt="Data Set Image">
-                    <button onclick="toggleContent('content1')">Menos</button>
+                    
+                    <button onclick = "toggleContent('content1')">Menos</button>
                 </div>
             </div>
             <div class="section">
                 <h3>2. Arquitectura y validación de los datos</h3>
-                <p>Descripción.</p>
+                <p>Creación del diagrama entidad-relación del dataset mediante la aplicación draw.io</p>
                 <button id="btn-content2" onclick="toggleContent('content2')">Saber más</button>
                 <div id="content2" style="display: none;">
-                    <p>arquitectura y validación de los datos. </p>
-                    <img src="./images/Diagrama Entidad-Relacion.jpg" alt="Arquitectura Image">
+                    <p>Diagrama Entidad-Relación </p>
+                    <img src="./images/Diagrama Entidad-Relacion.jpg" alt="Arquitectura Image" onclick="openModal(this.src)">
                     <button onclick="toggleContent('content2')">Menos</button>
                 </div>
             </div>
             <div class="section">
                 <h3>3. Análisis Exploratorio</h3>
-                <p>Descripción.</p>
+                <p>El objetivo del análisis es obtener datos que permitan elaborar un modelo para predecir el precio de alquiler turístico en Madrid.
+                </p>
                 <button id="btn-content3" onclick="toggleContent('content3')">Saber más</button>
                 <div id="content3" style="display: none;">
-                    <p>análisis exploratorio.</p>
-                    <img src="analisis.jpg" alt="Análisis Image">
+                    <p>Se siguieron los siguientes pasos:</p>
+                    <p>  
+                     <ol class="list">
+                        <li>Cargar Librerías.<br>
+                         Utilización de librerías como pandas, numpy, seaborn y matplotlib.</li>
+                         <li>Carga de datos.</li>
+                         <li>Información inicial obtenida:<br>
+                        Nuestro DataFrame inicial tiene 17 columnas y 1.414.018 filas. </li>
+                        <li>Normalización de columnas para un manejo más sencillo.</li>
+                        <li>Selección de columnas.</li>
+                        <li>Tratamiento y filtrado de los Datos.<br>
+                        El DataFrame final tiene 7,830 filas y 9 columnas.</li>
+                        <li>Visualización Gráfica de Datos - buscando outliers y relaciones.<br>
+                        Obtención de la matriz de correlacion.<br>
+                        Obtención de información preliminar.
+                    </li>
+                        <li>Guardado de Datos.</li>
+                    </ol>
+                </p>
+                    <img src="./images/Matriz de correlacion.jpg" alt="Matriz de correlación" onclick="openModal(this.src)">
+                    <p>Matriz de correlacion.</p>
                     <button onclick="toggleContent('content3')">Menos</button>
                 </div>
             </div>
             <div class="section">
                 <h3>4. Visualización de las métricas</h3>
-                <p>Descripción.</p>
+                <p>Realización de dashboard en Tableau.</p>
                 <button id="btn-content4" onclick="toggleContent('content4')">Saber más</button>
                 <div id="content4" style="display: none;">
-                    <p> visualización de las métricas.</p>
-                    <img src="metricas.jpg" alt="Métricas Image">
+                    <p>Visualización de las métricas.</p>
+                    <img src="./images/tableau dashboard.jpg" alt="gráfico de tableau" onclick="openModal(this.src)">
+                    <p>Dashboard informativo</p>
+                    <img src="./images/Dashboard 2.jpg" alt="gráfico de tableau" onclick="openModal(this.src)">
                     <button onclick="toggleContent('content4')">Menos</button>
+                    
+                   
                 </div>
             </div>
             <div class="section">
                 <h3>5. Pre-procesamiento y modelado</h3>
-                <p>Descripción.</p>
+                <p>Carga de datos, realización y prueba del modelo.</p>
                 <button id="btn-content5" onclick="toggleContent('content5')">Saber más</button>
                 <div id="content5" style="display: none;">
-                    <p>pre-procesamiento y modelado. </p>
-                    <img src="preprocesamiento.jpg" alt="Preprocesamiento Image">
+                    <p> Se siguieron los siguientes pasos:</p>
+                    <p>
+                        <ol class="list">
+                            <li>Cargamos las librerías necesarias.</li>
+                            <li>Carga de Datos.</li>
+                            <li>Pasar Datos Categóricos a Numéricos en 'room type'.<br>
+                             Los modelos de aprendizaje automático y estadísticos generalmente requieren datos numéricos como entrada, ya que las operaciones matemáticas subyacentes no pueden manejar directamente las etiquetas categóricas.<br> Por lo tanto, es crucial convertir las variables categóricas en un formato numérico antes de entrenar el modelo.
+                        Para ello empleamos la técnica de Codificación de Etiquetas (Label Encoding). Asigna un número entero único a cada categoría. Por ejemplo, para la variable 'room type', las categorías 'Entire home/apt', 'Private room' han sido codificadas como ‘Private room': 0, 'Entire home/apt': 1.</li>
+                        <li>Estandarización de datos y modelo.</li>
+                        <li>Optimización de hiperparámetros </li>
+                        <li>Guardar el modelo, cargarlo y probarlo.</li>
+                    </ol>
+                    </p>
+                    <img src="preprocesamiento.jpg" alt="Preprocesamiento Image" onclick="openModal(this.src)">
                     <button onclick="toggleContent('content5')">Menos</button>
                 </div>
             </div>
             <div class="section">
-                <h3>6. Informe</h3>
-                <p>Descripción</p>
+                <h3>6. Conclusiones</h3>
                 <button id="btn-content6" onclick="toggleContent('content6')">Saber más</button>
                 <div id="content6" style="display: none;">
-                    <p> informe</p>
-                    <img src="informe.jpg" alt="Informe Image">
+                   <div class="list">
+                    <h3> Suposiciones Validadas:</h3>
+                        <p class="bold">Relación precio-ubicación:</p>
+                        <p>Ya sabíamos que el precio estaría estrechamente relacionado con la ubicación del inmueble. Esta suposición se validó, ya que los datos mostraron una clara correlación entre el precio y las zonas donde se encuentran los inmuebles. Las áreas más céntricas y turísticas mostraron precios más altos.</p>
+                       <p class="bold">Precio por tipo de habitación:</p> <p>Asumimos que el precio variaría según el tipo de habitación ofrecida (Room Type), y se observó que el precio medio es mayor para apartamentos enteros (entire home/apt) en comparación con habitaciones privadas (Private Room). Esta suposición se validó claramente con los datos analizados.</p>
+                        
+                    <h3>Suposiciones No Validadas:</h3>
+                        <p class="bold">Hipótesis sobre las características influyentes:</p><p> Supusimos que algunas características del inmueble y comodidades como puede ser de habitaciones serían factores determinantes en el precio. Tras nuestro análisis hemos visto que no tiene una relación directa en el precio.</p>
+                       <p class="bold">Efecto de las reseñas:</p><p> Supusimos que las reseñas y calificaciones tendrían un impacto significativo en el precio, pero los datos mostraron que, aunque influyen, no tienen tanto peso como la ubicación del alojamiento.</p>
+                   </div>
+                    <img src="./images/proyectoFin.jpg" alt="Final del proyecto" onclick="openModal(this.src)">
                     <button onclick="toggleContent('content6')">Menos</button>
                 </div>
             </div>
         </section>
     </div>
     <footer>
-        <!-- <div class="social-media">
-            <a href="#"><img src="facebook.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram.png" alt="Instagram"></a>
-        </div> -->
+       
         <p>Yellow Data Team - Todos los derechos reservados</p>
     </footer>
-</body>
-</html>
-</body>
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+ </body>
 </html>
